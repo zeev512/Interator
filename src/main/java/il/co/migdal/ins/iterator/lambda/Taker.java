@@ -5,10 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Taker<T> {
-    public List<T> take(int n, Iterator<T> xs) {
+    public List<T> take(int n, Iterator<T> it) {
         List<T> taken = new ArrayList<T>();
-        for ( int i = 0; xs.hasNext() && i < n; i++ )
-            taken.add(xs.next());
+        for ( int i = 0; it.hasNext() && i < n; i++ )
+            taken.add(it.next());
         return taken;
     }
 
